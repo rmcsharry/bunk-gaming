@@ -17,6 +17,14 @@ export class RawgApiService {
     );
   }
 
+  getDevelopers() {
+    return this.httpClient
+      .get<GetDevelopersResponse>(
+        'https://api.rawg.io/api/developers?key=' + this.key
+      )
+      .pipe(map((data) => data.results));
+  }
+
   getPlatformParents() {
     return this.httpClient
       .get<GetPlatformParentsResponse>(
@@ -67,6 +75,13 @@ type GetPlatformParentsResponse = {
   next?: string;
   previous?: string;
   results: PlatformParentSingle[];
+};
+
+type GetDevelopersResponse = {
+  count: number;
+  next?: string;
+  previous?: string;
+  results: Developer[];
 };
 
 export type Game = {
@@ -126,4 +141,13 @@ export type Game = {
 type GamePlatformMetacritic = {
   metascore: number;
   url: string;
+};
+
+export type Developer = {
+  id: number;
+  name: string;
+  slug: string;
+  games_count: number;
+  image_background: string;
+  games: { id: number; slug: string; name: string; added: number }[];
 };
