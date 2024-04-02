@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# RAWG API
+
+Go to the [RAWG](https://rawg.io/apidocs) and sign up to get an API key.
+
+The full API documentation is found at [https://api.rawg.io/docs/](https://api.rawg.io/docs/)
