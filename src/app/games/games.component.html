@@ -1,0 +1,44 @@
+<ng-container *ngIf="game$ | async as game">
+  <h2>{{ game.name }}</h2>
+  <div [innerHTML]="game.description"></div>
+  <img [src]="game.background_image" alt="" />
+  <dl>
+    <dt>Released</dt>
+    <dd>{{ game.released }}</dd>
+    <dt>ESRB Rating</dt>
+    <dd>{{ game.esrb_rating.name }}</dd>
+    <dt>Developers</dt>
+    <dd>
+      <ul>
+        <li *ngFor="let developer of game.developers">
+          <a [routerLink]="['/developers', developer.id, developer.slug]">{{
+            developer.name
+          }}</a>
+        </li>
+      </ul>
+    </dd>
+    <dt>Platforms</dt>
+    <dd>
+      <ul>
+        <li *ngFor="let platform of game.platforms">
+          <a
+            [routerLink]="[
+              '/platforms',
+              platform.platform.id,
+              platform.platform.slug
+            ]"
+            >{{ platform.platform.name }}</a
+          >
+        </li>
+      </ul>
+    </dd>
+    <dt>Available In</dt>
+    <dd>
+      <ul>
+        <li *ngFor="let store of game.stores">
+          <a [href]="store.store.domain | https">{{ store.store.name }}</a>
+        </li>
+      </ul>
+    </dd>
+  </dl>
+</ng-container>

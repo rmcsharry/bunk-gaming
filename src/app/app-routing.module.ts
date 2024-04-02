@@ -4,6 +4,7 @@ import { DevelopersComponent } from './developers/developers.component';
 import { HomeComponent } from './home/home.component';
 import { PlatformGamesComponent } from './platform-games/platform-games.component';
 import { PlatformsComponent } from './pages/platforms/platforms.component';
+import { GamesComponent } from './games/games.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'platforms/:id/:slug', component: PlatformGamesComponent},
+    {path: 'games/:id/:slug', component: GamesComponent},
 ];
 
 @NgModule({
