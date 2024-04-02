@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
-import { from } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,9 +18,26 @@ export class RawgApiService {
       .pipe(map((data) => data.results));
   }
 
+  getPlatform(platformId: number) {
+    return this.httpClient.get<Platform>(
+      'https://api.rawg.io/api/platforms/' + platformId + '?key=' + this.key
+    );
+  }
+
+  getGamesByPlatform(platformId: number) {
+    return this.httpClient
+      .get(
+        'https://api.rawg.io/api/games?key=' +
+          this.key +
+          '&platforms=' +
+          platformId +
+          '&ordering=added'
+      )
+      .pipe(map((data: any) => data.results));
+  }
 }
 
-type Platform = {
+export type Platform = {
   id: number;
   name: string;
   slug: string;
