@@ -1,1 +1,18 @@
-<p>platforms works!</p>
+<div
+  *ngIf="platformParents$ | async as platformParents"
+  class="platform-parents"
+>
+  <div *ngFor="let platformParent of platformParents" class="platform-parent">
+    <h2>{{ platformParent.name }}</h2>
+    <div class="platforms">
+      <div *ngFor="let platform of platformParent.platforms" class="platform">
+        <a
+          class="platform__link"
+          [routerLink]="['/platforms', platform.id, platform.slug]"
+          >{{ platform.name }}</a
+        >
+        <img [src]="platform.image_background" alt="" class="platform__image" />
+      </div>
+    </div>
+  </div>
+</div>

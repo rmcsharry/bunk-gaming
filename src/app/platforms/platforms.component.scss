@@ -1,0 +1,28 @@
+.platform-parent {
+  margin-bottom: 4rem;
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__link {
+    font-size: 2rem;
+  }
+}
+
+.platform__image {
+  max-width: 300px;
+  border-radius: 1rem;
+}
