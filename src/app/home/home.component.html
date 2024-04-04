@@ -8,4 +8,15 @@
   upcoming feature that will allow you to search for games right from the
   homepage.
 </p>
-<p>Happy gaming!</p>
+<p>Here's some of the latest games. Happy gaming!</p>
+
+<ng-container *ngIf="games == [1]">
+  <p>Loading games...</p>
+</ng-container>
+
+<div *ngIf="games$ | async as games" class="games">
+  <a *ngFor="let game of games" class="game" [routerLink]="['/games', game.id]">
+    <p>{{ game.name }}</p>
+    <img [src]="game.background_image" alt="" class="game__image" />
+  </a>
+</div>

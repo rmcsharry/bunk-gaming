@@ -47,7 +47,17 @@ export class RawgApiService {
           this.key +
           '&platforms=' +
           platformId +
-          '&ordering=added'
+          '&ordering=-added'
+      )
+      .pipe(map((data: any) => data.results));
+  }
+
+  getLatestGames() {
+    return this.httpClient
+      .get(
+        'https://api.rawg.io/api/games?key=' +
+          this.key +
+          '&ordering=released&page_size=4'
       )
       .pipe(map((data: any) => data.results));
   }
