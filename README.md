@@ -13,6 +13,7 @@ Candidates will not only be judged on their coding strengths, but also on their 
 3. Create a [new repository](https://github.com/new) using your own GitHub account named `bunk-gaming` (feel free to )
 4. Add your own remote `git remote add origin git@github.com:GITHUB_USERNAME/bunk-gaming.git`
 5. Push to your own repository `git push -u origin main`
+6. Add `alexpchin` and `chazuk` to the list of collaborators https://github.com/GITHUB_USERNAME/bunk-gaming/settings/access
 
 ## Tasks
 
