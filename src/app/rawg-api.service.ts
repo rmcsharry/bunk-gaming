@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RawgApiService {
-  private key = '95d6c92a7fc84f079e51a6824e40626d';
+  private key = environment.rawg.api_key;
   private readonly httpClient = inject(HttpClient);
 
   getGame(gameId: number) {
