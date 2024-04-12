@@ -24,6 +24,8 @@ Candidates are expected to complete at least TWO of the following tasks:
 3. Analyse the codebase and create a number of GitHub Issues to be undertaken by the team (in the style of a Jira ticket you'd expect to work on)
 4. Implement a feature that would showcase a particular expertise or talent and document the feature to present to stakeholders
 
+After you have completed the test, please make sure that all code is on the main branch, and update the README with any instructions, thoughts and feedback you deem necessary.
+
 ## User Stories
 
 ### BK-4478 - Story: Display list of Games by Developer
@@ -35,7 +37,7 @@ Candidates are expected to complete at least TWO of the following tasks:
 1. Clicking on a Developer should take the user to the games by developer page.
 2. Present the developers name and information from the API.
 3. Present a list of games associated with that developer from the API.
-4. The list should include relevant information about each game, such as the title, image and release date.
+4. The list should include the title, image and any other information you think is relevant.
 5. Ensure the feature is responsive and accessible on various devices and screen sizes.
 6. Clicking on a Game should take the user to the associated games page
 
@@ -51,7 +53,7 @@ Candidates are expected to complete at least TWO of the following tasks:
 4. Add a screenshots section underneath the detail section.
 5. **OPTIONAL** Include new sections for additional information returned from the API to provide users with more comprehensive game information.
 
-![](./doc-assets/game-page-design.png | width=400)
+<img src="./doc-assets/game-page-design.png" alt="" width="400" />
 
 ### BK-9000 - Story: Implement Pagination for the List of Games
 
@@ -67,17 +69,17 @@ As a user, I want to navigate through the list of games using pagination so that
 
 ## Tasks
 
-### BK-3212 - Task: Refactor Game Card and List to be consisent across application
+### BK-5423 - Task: Fix broken tests
+
+There are a number of tests that are currently blocking us from deploying the latest features to production.
+
+### BK-6212 - Task: Refactor Game Card and List to be consisent across application
 
 The Home page and Platform Games page both show a list of Games, but each has it's own custom styling. This should be refactored to use a single component to display Game Cards and a list of Games.
 
 There is a proposed design below, but most of the information can be excluded for the simple card.
 
-![](./doc-assets/game-page-design.png | width=200)
-
-### BK-5423 - Task: Fix broken tests
-
-There are a number of tests that are currently blocking us from deploying the latest features to production.
+<img src="./doc-assets/game-page-design.png" alt="" width="200" />
 
 #### Requirements:
 
@@ -124,5 +126,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-test
