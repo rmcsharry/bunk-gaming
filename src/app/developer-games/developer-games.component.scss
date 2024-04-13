@@ -1,0 +1,14 @@
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.game {
+  width: 300px;
+  padding-bottom: 20px;
+}
+.game > a > img {
+  width: 100%;
+  min-height: 200px;
+  max-height: 50%;
+}

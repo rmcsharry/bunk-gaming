@@ -22,12 +22,31 @@ export class RawgApiService {
     );
   }
 
+  getDeveloper(developerId: number) {
+    return this.httpClient.get<Developer>(
+      'https://api.rawg.io/api/developers/' + developerId + '?key=' + this.key
+    );
+  }
+
   getDevelopers() {
     return this.httpClient
       .get<GetDevelopersResponse>(
         'https://api.rawg.io/api/developers?key=' + this.key
       )
       .pipe(map((data) => data.results));
+  }
+
+
+  getGamesByDeveloper(developerId: number) {
+    return this.httpClient
+      .get(
+        'https://api.rawg.io/api/games?key=' +
+          this.key +
+          '&developers=' +
+          developerId +
+          '&ordering=-added'
+      )
+      .pipe(map((data: any) => data.results));
   }
 
   getPlatformParents() {
@@ -164,5 +183,6 @@ export type Developer = {
   slug: string;
   games_count: number;
   image_background: string;
-  games: { id: number; slug: string; name: string; added: number }[];
+  description: string;
+  games?: { id: number; slug: string; name: string; added: number }[];
 };

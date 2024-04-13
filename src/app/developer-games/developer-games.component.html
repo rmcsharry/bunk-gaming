@@ -1,0 +1,29 @@
+<div *ngIf="developer$ | async as developer">
+  <h2>{{ developer.name }}</h2>
+  <h4>{{ developer.games_count }} games</h4>
+  <br>
+  <div [innerHTML]="developer.description"></div>
+  <br>
+
+  <div *ngIf="games$ | async as games" class="games">
+    <ng-container *ngFor="let game of games">
+      <div class="game">
+    <a
+      [routerLink]="['/games', game.id]"
+    >
+      {{ game.name }}
+      <img
+        *ngIf="game.background_image"
+        [src]="game.background_image"
+        alt=""
+        class="game__image"
+      />
+    </a>
+
+      <span *ngFor="let platform of game.platforms">
+        <p class="no-underline">{{ platform.platform.name }}</p>
+      </span>
+    </div>
+    </ng-container>
+  </div>
+</div>

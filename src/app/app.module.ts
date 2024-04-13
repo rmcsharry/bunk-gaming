@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DevelopersComponent } from './pages/developers/developers.component';
 import { HomeComponent } from './home/home.component';
 import { PlatformsComponent } from './pages/platforms/platforms.component';
+import { DeveloperGamesComponent } from './developer-games/developer-games.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { PlatformsComponent } from './pages/platforms/platforms.component';
     HomeComponent,
     PlatformsComponent,
     DevelopersComponent,
+    DeveloperGamesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
