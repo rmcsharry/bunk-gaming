@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GamesComponent } from './games.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ActivatedRoute } from '@angular/router';
+import { ActivatedRouteMock } from '../../../src/app/mocks/ActivatedRouteMock';
 
 describe('GamesComponent', () => {
   let component: GamesComponent;
@@ -8,7 +11,13 @@ describe('GamesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ GamesComponent ]
+      imports: [GamesComponent, HttpClientTestingModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: new ActivatedRouteMock({ id: 1 })
+        }
+      ]
     })
     .compileComponents();
 
