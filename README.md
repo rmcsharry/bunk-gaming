@@ -103,6 +103,10 @@ The full API documentation is found at [https://api.rawg.io/docs/](https://api.r
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
 
+### Getting started
+
+After cloning the project, run `npm i` in your terminal to install all dependencies.
+
 ### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
