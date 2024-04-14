@@ -21,7 +21,7 @@ const routes: Routes = [
     component: DevelopersComponent,
   },
   {
-    path: 'developers/:id',
+    path: 'developers/:id/:slug',
     component: DeveloperGamesComponent
   },
   {
@@ -29,7 +29,7 @@ const routes: Routes = [
     component: PlatformGamesComponent
   },
   {
-    path: 'games/:id',
+    path: 'games/:id/:slug',
     component: GamesComponent
   },
 ];

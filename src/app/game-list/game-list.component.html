@@ -1,0 +1,6 @@
+<div *ngIf="(games$ | async) as games; else loadingGames" class="games">
+  <app-game-card class="game-card" [games]="games"></app-game-card>
+</div>
+<ng-template #loadingGames>
+  <p>Loading games...</p>
+</ng-template>

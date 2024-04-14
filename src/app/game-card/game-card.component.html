@@ -1,0 +1,15 @@
+<a *ngFor="let game of games" class="game" [routerLink]="['/games', game.id, game.slug]">
+  <p>{{ game.name }}</p>
+  <ng-container *ngIf="game.background_image; else noImage">
+    <img [src]="game.background_image" alt="" class="game__image" />
+  </ng-container>
+  <ng-template #noImage>
+    <img src="assets/no-image.jpg" alt="" class="game__image" />
+  </ng-template>
+  <div class="platforms">
+    <h5>Platforms:</h5>
+    <span *ngFor="let platform of game.platforms">
+      <span>{{ platform.platform.name }}</span>
+    </span>
+  </div>
+</a>

@@ -4,8 +4,9 @@
   <br>
   <div [innerHTML]="developer.description"></div>
   <br>
+  <app-game-list [games$]="games$"></app-game-list>
 
-  <div *ngIf="games$ | async as games" class="games">
+  <!-- <div *ngIf="games$ | async as games" class="games">
     <ng-container *ngFor="let game of games">
       <div class="game">
         <a [routerLink]="['/games', game.id]">
@@ -17,5 +18,5 @@
         </a>
       </div>
     </ng-container>
-  </div>
+  </div> -->
 </div>

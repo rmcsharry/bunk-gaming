@@ -1,0 +1,27 @@
+
+.game {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid transparent;
+  &:hover {
+    border: 1px solid var(--accent);
+  }
+}
+
+.game__image {
+  display: block;
+  width: 300px;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+a {
+  text-decoration: none;
+}
+.platforms {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  > h5 {
+    text-align: left;
+  }
+}

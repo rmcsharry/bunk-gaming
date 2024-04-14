@@ -19,13 +19,3 @@ p {
   font-weight: 300;
   margin-block: 1rem;
 }
-
-.games {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.game {
-  text-align: center;
-}

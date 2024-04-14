@@ -20,21 +20,3 @@ p {
   font-weight: 300;
   margin-block: 1rem;
 }
-
-.games {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.game p {
-  font-size: 1rem;
-}
-
-.game__image {
-  display: block;
-  max-width: 100%;
-  aspect-ratio: 16/9;
-  margin-top: 1rem;
-  object-fit: cover;
-}

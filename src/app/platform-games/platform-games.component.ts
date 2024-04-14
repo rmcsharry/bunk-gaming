@@ -3,11 +3,12 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Observable, map, switchMap } from 'rxjs';
 import { Platform, RawgApiService } from '../rawg-api.service';
+import { GameListComponent } from 'src/app/game-list/game-list.component';
 
 @Component({
   selector: 'app-platform-games',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, GameListComponent],
   templateUrl: './platform-games.component.html',
   styleUrls: ['./platform-games.component.scss'],
 })
