@@ -8,22 +8,14 @@
   <div *ngIf="games$ | async as games" class="games">
     <ng-container *ngFor="let game of games">
       <div class="game">
-    <a
-      [routerLink]="['/games', game.id]"
-    >
-      {{ game.name }}
-      <img
-        *ngIf="game.background_image"
-        [src]="game.background_image"
-        alt=""
-        class="game__image"
-      />
-    </a>
-
-      <span *ngFor="let platform of game.platforms">
-        <p class="no-underline">{{ platform.platform.name }}</p>
-      </span>
-    </div>
+        <a [routerLink]="['/games', game.id]">
+          <h4>{{ game.name }}</h4>
+          <img *ngIf="game.background_image" [src]="game.background_image" alt="" class="game__image" />
+          <span *ngFor="let platform of game.platforms">
+            <p>{{ platform.platform.name }}</p>
+          </span>
+        </a>
+      </div>
     </ng-container>
   </div>
 </div>
