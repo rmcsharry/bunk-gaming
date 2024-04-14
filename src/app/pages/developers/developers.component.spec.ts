@@ -10,7 +10,7 @@ describe('DevelopersComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ HttpClientTestingModule ],
-      declarations: [ DevelopersComponent ]
+      declarations: [ DevelopersComponent ],
     })
     .compileComponents();
 
