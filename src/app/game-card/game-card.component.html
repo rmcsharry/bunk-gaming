@@ -1,4 +1,4 @@
-<a *ngFor="let game of games" class="game" [routerLink]="['/games', game.id, game.slug]">
+<a data-testid="game-card" *ngFor="let game of games" class="game" [routerLink]="['/games', game.id, game.slug]">
   <p>{{ game.name }}</p>
   <ng-container *ngIf="game.background_image; else noImage">
     <img [src]="game.background_image" alt="" class="game__image" />
